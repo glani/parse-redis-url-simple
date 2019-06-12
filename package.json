@@ -1,0 +1,28 @@
+{
+  "name": "parse-redis-url-simple",
+  "version": "1.0.0",
+  "description": "Simple parser for redis url",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glani/parse-redis-url-simple.git"
+  },
+  "keywords": [
+    "redis",
+    "parse",
+    "url",
+    "parser"
+  ],
+  "author": "glani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glani/parse-redis-url-simple/issues"
+  },
+  "homepage": "https://github.com/glani/parse-redis-url-simple#readme",
+  "devDependencies": {
+    "typescript": "^3.5.1"
+  }
+}
