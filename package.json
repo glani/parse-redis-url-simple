@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "jest --config jestconfig.json",
+    "test": "jest --env=node --colors --coverage test",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
@@ -32,7 +32,8 @@
   },
   "homepage": "https://github.com/glani/parse-redis-url-simple#readme",
   "devDependencies": {
-    "@types/jest": "^24.0.13",
+    "@types/jest": "^24.0.14",
+    "@types/node": "^12.0.8",
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
@@ -45,7 +46,7 @@
   ],
   "exclude": [
     "node_modules",
-    "**/*.spec.ts",
+    "**/*.test.ts",
     "**/__tests__/*"
   ]
 }
