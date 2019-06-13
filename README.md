@@ -1,4 +1,4 @@
-# parse-redis-url-simple parsion redis urls with sentinel support
+# parse-redis-url-simple parsing redis urls with sentinel support
 
 [![Build Status](https://travis-ci.org/glani/parse-redis-url-simple.svg?branch=master)](https://travis-ci.org/glani/parse-redis-url-simple)
 [![npm version](https://badge.fury.io/js/parse-redis-url-simple.svg)](https://badge.fury.io/js/parse-redis-url-simple)
