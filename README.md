@@ -49,6 +49,12 @@ Could be found here:
 
 Prior art
 ---------
-All implementations are not for production use only for testing purposes. 
-Usually there have been more than onde redis server in production. Moreover sometimes it is implemented via cluster or sentinel.
+All implementations 
+* [parse-redis-url](https://github.com/laggyluke/node-parse-redis-url)
+* [redis-url](https://github.com/ddollar/redis-url)
+* [redis-url-parser](https://github.com/cilindrox/redis-url-parser)
+* [redis-url-parse](https://github.com/crccheck/redis-url-parse)
+
+are not maintained or not for production use. It looks they were implemented only for testing purposes. 
+Usually there have been more than one redis server in production. Moreover sometimes it is implemented via cluster or sentinel.
 
