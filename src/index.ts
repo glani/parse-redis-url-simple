@@ -4,10 +4,10 @@ const redisDefaultPort = 6379;
 const sentinelDefaultPort = 26379;
 
 export interface IRedisUrl {
-  host: string;
-  port: number;
   database?: string;
+  host: string;
   password?: string;
+  port: number;
 };
 
 const predefinedSeparatorRegexp = /,|;|\s/;
@@ -23,16 +23,16 @@ function preparePassword(auth: string | undefined, encoding?: BufferEncoding) {
 }
 
 function prepareResult(v: string, sentinel: boolean, encoding?: BufferEncoding): IRedisUrl {
-  if (v.search('://') == -1) {
+  if (v.search('://') === -1) {
     v = 'redis://' + v;
   }
   const urlWithStringQuery = parse(v);
 
   return {
-    host: urlWithStringQuery.hostname || 'localhost',
-    port: Number(urlWithStringQuery.port || (sentinel ? sentinelDefaultPort : redisDefaultPort)),
     database: sentinel ? undefined : ( ( (urlWithStringQuery.pathname || '/0').substr(1) || '0') ),
+    host: urlWithStringQuery.hostname || 'localhost',
     password: sentinel ? undefined : preparePassword(urlWithStringQuery.auth, encoding),
+    port: Number(urlWithStringQuery.port || (sentinel ? sentinelDefaultPort : redisDefaultPort)),
   };
 }
 
@@ -42,13 +42,11 @@ export function parseRedisUrl(value?: string,
                               encoding?: BufferEncoding): IRedisUrl[] {
   if (!value) {
     return [{
+      database: (sentinel ? undefined : '0'),
       host: 'localhost',
       port: (sentinel ? sentinelDefaultPort : redisDefaultPort),
-      database: (sentinel ? undefined : '0'),
     }];
   }
-
-    console.log(value)
 
   const result = new Array<IRedisUrl>();
   const urlValues = value.split(separatorRegexp).map(value1 => value1.trim()).filter(value1 => value1 && value1.length);

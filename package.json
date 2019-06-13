@@ -22,8 +22,8 @@
   "keywords": [
     "redis",
     "sentinel",
-    "parse",
     "url",
+    "parse",
     "parser"
   ],
   "engines": {
