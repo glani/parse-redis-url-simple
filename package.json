@@ -21,10 +21,14 @@
   },
   "keywords": [
     "redis",
+    "sentinel",
     "parse",
     "url",
     "parser"
   ],
+  "engines": {
+    "node": ">=6.13.0"
+  },
   "author": "glani",
   "license": "ISC",
   "bugs": {
