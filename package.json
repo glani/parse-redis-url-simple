@@ -1,6 +1,6 @@
 {
   "name": "parse-redis-url-simple",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple parser for redis url",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -36,14 +36,14 @@
   },
   "homepage": "https://github.com/glani/parse-redis-url-simple#readme",
   "devDependencies": {
-    "@types/jest": "^24.0.14",
-    "@types/node": "^12.0.8",
-    "jest": "^24.8.0",
-    "prettier": "^1.18.2",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.17.0",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.20.6",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "ts-jest": "^26.5.4",
+    "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.5.1"
+    "typescript": "^3.9.9"
   },
   "files": [
     "lib/**/*"

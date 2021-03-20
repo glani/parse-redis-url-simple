@@ -13,7 +13,7 @@ export interface IRedisUrl {
 const predefinedSeparatorRegexp = /,|;|\s/;
 
 
-function preparePassword(auth: string | undefined, encoding?: BufferEncoding) {
+function preparePassword(auth: string | null, encoding?: BufferEncoding) {
     if (!auth) {
         return undefined;
     }
